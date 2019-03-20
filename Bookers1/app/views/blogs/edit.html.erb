@@ -1,0 +1,11 @@
+<h1>Editing Book</h1>
+<%= form_for(@blog) do |f| %>
+    <h4>タイトル</h4>
+    <%= f.text_field :title %>
+    <h4>本文</h4>
+    <%= f.text_area :body %>
+    <%= f.submit 'Update Book' %>
+    
+   <%= link_to "Show", blogs_show_path(@blog) %>
+   <%= link_to "Back", blogs_new_path(@blog) %>
+<% end %>
